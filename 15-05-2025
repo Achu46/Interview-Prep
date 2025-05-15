@@ -1,0 +1,50 @@
+// Odd or Even
+
+import java.util.Scanner;
+
+public class Odd_or_Even {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the Number:");
+        int num = scan.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println("The Given Number is an Even Number");
+        } else {
+            System.out.println("The Given Number is an Odd Number");
+        }
+    }
+}
+
+OUTPUT:
+
+// For Even 
+num=2
+The Given Number is an Even Number
+
+//For Odd
+num=1
+The Given Number is an Odd Number
+
+// Average of Two Numbers
+
+import java.util.Scanner;
+
+public class Average {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter Number 1:");
+        int num1 = scan.nextInt();
+        System.out.println("Enter Number 2:");
+        int num2 = scan.nextInt();
+
+        double result = (num1 + num2) / 2;
+        System.out.println("Results: " + result);
+    }
+}
+
+OUTPUT:
+num1=10,num2=20
+Results:15.0
