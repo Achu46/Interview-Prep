@@ -24,3 +24,12 @@ public class Armstrong_Number {
         }
     }
 }
+
+OUTPUT:
+//For Armstrong Number
+number=153
+153 is an Armstrong Number
+
+//For Non Armstrong Number
+number=256
+256 is not an Armstrong Number
