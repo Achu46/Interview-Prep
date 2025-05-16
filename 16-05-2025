@@ -1,0 +1,58 @@
+//Least Common Factor
+
+public class LCM {
+    int lcm(int a, int b) {
+        int min = a > b ? a : b;
+        while (min > 2) {
+            if (min % a == 0 && min % b == 0) {
+                return min;
+            }
+            min--;
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        int a = 3, b = 6;
+
+        LCM obj = new LCM();
+        System.out.println("Results:" + obj.lcm(a, b));
+    }
+}
+
+OUTPUT:
+a=3,b=6
+Results:6
+
+//Swap two Numbers
+
+public class Swap_Number {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the Number1:");
+        int num1 = scan.nextInt();
+        System.out.println("Enter the Number2:");
+        int num2 = scan.nextInt();
+
+        System.out.println("Before Swapping");
+        System.out.println("Number 1:" + num1);
+        System.out.println("Number 2:" + num2);
+
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
+
+        System.out.println("After Swapping");
+        System.out.println("Number 1:" + num1);
+        System.out.println("Number 2:" + num2);
+    }
+}
+
+OUTPUT:
+Before Swapping
+Number 1:10
+Number 2:20
+After Swapping
+Number:20
+Number:10
