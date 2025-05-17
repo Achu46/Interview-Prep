@@ -1,0 +1,40 @@
+// Concate two string
+
+public class Concatenate {
+    public static void main(String[] args) {
+        String a = "Hello";
+        String b = "World";
+
+        String result = a.concat(" ").concat(b);//Alternative Method
+        System.out.println(result);
+    }
+}
+
+OUTPUT:
+Hello World
+
+// Leap Year 
+
+import java.util.Scanner;
+
+public class Leap_year {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the Year:");
+        int year = scan.nextInt();
+
+        if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+            System.out.println("The Leap Year is :" + year);
+        } else {
+            System.out.println("This Year is not a Leap Year:" + year);
+        }
+    }
+}
+
+OUTPUT:
+
+year=2026
+The Leap Year is :2026
+year=2027
+This Year is not a Leap Year:2027
