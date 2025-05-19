@@ -1,0 +1,43 @@
+//String Pallindrome
+
+import java.util.Scanner;
+
+public class Pallindrome {
+    public static boolean pallindrome(String sentence) {
+        sentence = sentence.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        int left = 0;
+        int right = sentence.length() - 1;
+
+        while (left < right) {
+            if (sentence.charAt(left) != sentence.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the String:");
+        String sentence = scan.nextLine();
+
+        if (pallindrome(sentence)) {
+            System.out.println("The given String is Palindrome");
+        } else {
+            System.out.println("The given String is not Palindrome");
+        }
+
+        scan.close();
+    }
+}
+
+OUTPUT:
+Malayalam
+The given String is Palindrome
+
+Cricket
+The given String is not Palindrome
