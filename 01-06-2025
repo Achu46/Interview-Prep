@@ -1,0 +1,62 @@
+// Linked List Add Method
+
+// package Linked_List;
+
+class Node {
+    int data;
+    Node next;
+}
+
+class LinkedList {
+    Node head;
+
+    void add(int data) {
+        Node node = new Node();
+        node.data = data;
+
+        if (head == null) {
+            head = node;
+        } else {
+            Node n = head;
+            while (n.next != null) {
+                n = n.next;
+            }
+            n.next = node;
+        }
+    }
+
+    void show() {
+        Node node = head;
+        while (node != null) {
+            System.out.print(node.data + " ");
+            node = node.next;
+        }
+    }
+
+    void addAtFirst(int data) {
+        Node node = new Node();
+
+        node.data = data;
+        node.next = head;
+        head = node;
+    }
+}
+
+public class Add {
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+
+        list.show();
+        System.out.println();
+        list.addAtFirst(50);
+
+        list.show();
+    }
+}
+
+OUTPUT:
+10, 20, 30, 40
