@@ -1,0 +1,61 @@
+class Node {
+    int data;
+    Node next;
+}
+
+class LinkedList {
+    Node head;
+
+    void add(int data) {
+        Node node = new Node();
+        node.data = data;
+        if (head == null) {
+            head = node;
+        } else {
+            Node n = head;
+            while (n.next != null) {
+                n = n.next;
+            }
+            n.next = node;
+        }
+    }
+
+    void show() {
+        Node n = head;
+        while (n != null) {
+            System.out.print(n.data + " ");
+            n = n.next;
+        }
+        System.out.println();
+    }
+
+    int max() {
+        int max = head.data;
+        Node current = head.next;
+
+        while (current != null) {
+            if (current.data > max) {
+                max = current.data;
+            }
+            current = current.next;
+        }
+        return max;
+    }
+}
+
+public class Max_Element {
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+
+        list.show();
+
+        System.out.println("The Maximum value in the List: " + list.max());
+    }
+}
+
+OUTPUT:
+The Maximum value in the List:40
