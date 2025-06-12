@@ -1,0 +1,40 @@
+// String Concept
+
+public class Anagram {
+    public static void main(String[] args) {
+        String str1 = "silent";
+        String str2 = "listen";
+
+        char[] char1 = str1.toCharArray();
+        char[] char2 = str2.toCharArray();
+
+        for (int i = 0; i < char1.length; i++) {
+            for (int j = i; j < char1.length; j++) {
+                char temp = char1[i];
+                char1[i] = char1[j];
+                char1[j] = temp;
+            }
+        }
+
+        for (int i = 0; i < char2.length; i++) {
+            for (int j = i; j < char2.length; j++) {
+                char temp = char2[i];
+                char2[i] = char2[j];
+                char2[j] = temp;
+            }
+        }
+
+        boolean isAnagram = true;
+        for (int i = 0; i < char1.length; i++) {
+            if (char1[i] != char2[i]) {
+                isAnagram = false;
+                break;
+            }
+        }
+
+        System.out.println(isAnagram);
+    }
+}
+
+OUTPUT:
+true
