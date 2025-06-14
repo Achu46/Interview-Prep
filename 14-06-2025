@@ -1,0 +1,25 @@
+// Pallindrome
+
+public class Pallindrome {
+    public static void main(String[] args) {
+        String str1 = "madam";
+        boolean isPallindrome = true;
+
+        char[] c = str1.toCharArray();
+        for (int i = 0; i < c.length - 1; i++) {
+            if (c[i] != c[c.length - 1 - i]) {
+                isPallindrome = false;
+                break;
+            }
+        }
+
+        if (isPallindrome) {
+            System.out.println("It's a Pallindrome");
+        } else {
+            System.out.println("It's not a Pallindrome");
+        }
+    }
+}
+
+OUTPUT:
+It's a Pallindrome
